@@ -30,22 +30,23 @@
           <div class="row">
             <div class="col-xs-12">
               <div class="invoice-title">
-                <h2>Invoice # 12345</h2>
+                <h2>Invoice # <input id="invoice-number" class="form-control" type="text" value=""></h2>
               </div>
               <hr>
               <div class="row">
                 <div class="col-xs-6">
-                  <address>
-                    <strong>Billed To:</strong><br>
-                    John Smith<br>
-                    1234 Main<br>
-                    Apt. 4B<br>
-                    Springfield, ST 54321
-                  </address>
+                  <strong>To:</strong>
+                  <textarea class="form-control" id="address">
+658 Preston Old Road
+Feniscowles
+Blackburn
+Lancashire
+BB2 5EP
+                  </textarea>
                 </div>
                 <div class="col-xs-6 text-right">
                   <address>
-                    <strong>Shipped To:</strong><br>
+                    <strong>From:</strong><br>
                     Jane Smith<br>
                     1234 Main<br>
                     Apt. 4B<br>
@@ -55,15 +56,11 @@
               </div>
               <div class="row">
                 <div class="col-xs-6">
-                  <address>
-                    <strong>Payment Method:</strong><br>
-                    Visa ending **** 4242<br>
-                    jsmith@email.com
-                  </address>
+                  
                 </div>
                 <div class="col-xs-6 text-right">
                   <address>
-                    <strong>Order Date:</strong><br>
+                    <strong>Date:</strong><br>
                     March 7, 2014<br><br>
                   </address>
                 </div>
@@ -73,19 +70,15 @@
 
           <div class="row">
             <div class="col-md-12">
-              <div class="panel panel-default">
-                <div class="panel-heading">
-                  <h3 class="panel-title"><strong>Order summary</strong></h3>
-                </div>
-                <div class="panel-body">
+              
                   <div class="table-responsive">
-                    <table class="table table-condensed">
+                    <table class="table table-condensed table-bordered">
                       <thead>
                         <tr>
-                          <td><strong>Item</strong></td>
-                          <td class="text-center"><strong>Price</strong></td>
-                          <td class="text-center"><strong>Quantity</strong></td>
-                          <td class="text-right"><strong>Totals</strong></td>
+                          <th><strong>Item</strong></th>
+                          <th class="text-center"><strong>Price</strong></th>
+                          <th class="text-center"><strong>Quantity</strong></th>
+                          <th class="text-right"><strong>Totals</strong></th>
                         </tr>
                       </thead>
                       <tbody>
@@ -128,8 +121,7 @@
                         </tr>
                       </tbody>
                     </table>
-                  </div>
-                </div>
+                  
               </div>
             </div>
           </div>

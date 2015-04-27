@@ -33,3 +33,29 @@ body {
     max-width: 730px;
   }
 }
+
+// Form elements
+.form-control {
+  border: none;
+  border: 0;
+  box-shadow: none;
+  resize: none;
+  padding: 0;
+  &:hover, 
+  &:focus {
+    background-color: #EEFF88;
+  }
+}
+
+// Address
+#address {
+  min-height: 130px;
+}
+
+// Invoice number
+#invoice-number {
+  display: inline;
+  width: auto;
+  font-size: 30px;
+}
+
