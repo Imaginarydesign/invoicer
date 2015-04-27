@@ -43,12 +43,12 @@ body {
   padding: 0;
   &:hover, 
   &:focus {
-    background-color: #EEFF88;
+    background: #EEFF88;
   }
 }
 
 // Address
-#address {
+#address-from, #address-to {
   min-height: 130px;
 }
 
