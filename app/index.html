@@ -77,6 +77,7 @@ BB2 5EP
                       <thead>
                         <tr>
                           <th><strong>Item</strong></th>
+                          <th><strong>Description</strong></th>
                           <th class="text-center"><strong>Price</strong></th>
                           <th class="text-center"><strong>Quantity</strong></th>
                           <th class="text-right"><strong>Totals</strong></th>
@@ -86,23 +87,30 @@ BB2 5EP
                         <!-- foreach ($order->lineItems as $line) or some such thing here -->
                         <tr>
                           <td>BS-200</td>
+                          <td>Item description</td>
                           <td class="text-center">$10.99</td>
                           <td class="text-center">1</td>
                           <td class="text-right">$10.99</td>
                         </tr>
                         <tr>
                           <td>BS-400</td>
+                          <td>Item description</td>
                           <td class="text-center">$20.00</td>
                           <td class="text-center">3</td>
                           <td class="text-right">$60.00</td>
                         </tr>
                         <tr>
                           <td>BS-1000</td>
+                          <td>Item description</td>
                           <td class="text-center">$600.00</td>
                           <td class="text-center">1</td>
                           <td class="text-right">$600.00</td>
                         </tr>
                         <tr>
+                          <td colspan="5"><button class="btn btn-sm btn-success">Add item</button></td>
+                        </tr>
+                        <tr>
+                          <td class="thick-line"></td>
                           <td class="thick-line"></td>
                           <td class="thick-line"></td>
                           <td class="thick-line text-center"><strong>Subtotal</strong></td>
@@ -111,10 +119,12 @@ BB2 5EP
                         <tr>
                           <td class="no-line"></td>
                           <td class="no-line"></td>
+                          <td class="no-line"></td>
                           <td class="no-line text-center"><strong>Shipping</strong></td>
                           <td class="no-line text-right">$15</td>
                         </tr>
                         <tr>
+                          <td class="no-line"></td>
                           <td class="no-line"></td>
                           <td class="no-line"></td>
                           <td class="no-line text-center"><strong>Total</strong></td>
