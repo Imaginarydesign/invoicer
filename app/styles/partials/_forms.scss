@@ -22,3 +22,14 @@
   width: auto;
   font-size: 30px;
 }
+
+// Container div for positioning delete row absolutely
+.del {
+  position: relative;
+}
+
+.deleterow {
+  position: absolute;
+  top: 0;
+  left: -25px;
+}

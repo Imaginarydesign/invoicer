@@ -72,68 +72,50 @@ BB2 5EP
           <div class="row">
             <div class="col-md-12">
               
-                  <div class="table-responsive">
-                    <table class="table table-condensed table-bordered">
-                      <thead>
-                        <tr>
-                          <th><strong>Item</strong></th>
-                          <th><strong>Description</strong></th>
-                          <th class="text-center"><strong>Price</strong></th>
-                          <th class="text-center"><strong>Quantity</strong></th>
-                          <th class="text-right"><strong>Totals</strong></th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <!-- foreach ($order->lineItems as $line) or some such thing here -->
-                        <tr>
-                          <td>BS-200</td>
-                          <td>Item description</td>
-                          <td class="text-center">$10.99</td>
-                          <td class="text-center">1</td>
-                          <td class="text-right">$10.99</td>
-                        </tr>
-                        <tr>
-                          <td>BS-400</td>
-                          <td>Item description</td>
-                          <td class="text-center">$20.00</td>
-                          <td class="text-center">3</td>
-                          <td class="text-right">$60.00</td>
-                        </tr>
-                        <tr>
-                          <td>BS-1000</td>
-                          <td>Item description</td>
-                          <td class="text-center">$600.00</td>
-                          <td class="text-center">1</td>
-                          <td class="text-right">$600.00</td>
-                        </tr>
-                        <tr>
-                          <td colspan="5"><button class="btn btn-sm btn-success">Add item</button></td>
-                        </tr>
-                        <tr>
-                          <td class="thick-line"></td>
-                          <td class="thick-line"></td>
-                          <td class="thick-line"></td>
-                          <td class="thick-line text-center"><strong>Subtotal</strong></td>
-                          <td class="thick-line text-right">$670.99</td>
-                        </tr>
-                        <tr>
-                          <td class="no-line"></td>
-                          <td class="no-line"></td>
-                          <td class="no-line"></td>
-                          <td class="no-line text-center"><strong>Shipping</strong></td>
-                          <td class="no-line text-right">$15</td>
-                        </tr>
-                        <tr>
-                          <td class="no-line"></td>
-                          <td class="no-line"></td>
-                          <td class="no-line"></td>
-                          <td class="no-line text-center"><strong>Total</strong></td>
-                          <td class="no-line text-right">$685.99</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  
-              </div>
+                <table class="table table-condensed table-bordered" id="tab_logic">
+                  <thead>
+                    <tr>
+                      <th><strong>Item</strong></th>
+                      <th><strong>Description</strong></th>
+                      <th><strong>Price</strong></th>
+                      <th><strong>Quantity</strong></th>
+                      <th><strong>Totals</strong></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="item-row">
+                      <td>
+                        <div class="del">
+                          <textarea class="form-control" id="date">Website</textarea>
+                          <a href="#" class="deleterow"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
+                        </div>
+                      </td>
+                      <td><textarea class="form-control" id="date">Description</textarea></td>
+                      <td><textarea class="form-control" id="date">£1999</textarea></td>
+                      <td><textarea class="form-control" id="date">1</textarea></td>
+                      <td><textarea class="form-control" id="date">$1999</textarea></td>
+                    </tr>
+                    <tr>
+                      <td colspan="5"><button class="btn btn-sm btn-success" id="addrow">Add item</button></td>
+                    </tr>
+                    <tr>
+                      <td colspan="3" class="thick-line"></td>
+                      <td class="thick-line text-center"><strong>Subtotal</strong></td>
+                      <td class="thick-line text-right">$670.99</td>
+                    </tr>
+                    <tr>
+                      <td colspan="3" class="no-line"></td>
+                      <td class="no-line text-center"><strong>Shipping</strong></td>
+                      <td class="no-line text-right">$15</td>
+                    </tr>
+                    <tr>
+                      <td colspan="3" class="no-line"></td>
+                      <td class="no-line text-center"><strong>Total</strong></td>
+                      <td class="no-line text-right">$685.99</td>
+                    </tr>
+                  </tbody>
+                </table>
+              
             </div>
           </div>
         </div>
