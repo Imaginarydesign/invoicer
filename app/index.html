@@ -37,21 +37,19 @@
                 <div class="col-xs-7">
                   <strong>To:</strong>
                   <textarea class="form-control" id="address-to">
-658 Preston Old Road
-Feniscowles
-Blackburn
-Lancashire
-BB2 5EP
+Adam Bates
+85 Prince Consort Road
+KENTCHURCH
+HR2 0QY
                   </textarea>
                 </div>
                 <div class="col-xs-5">
                   <strong>From:</strong><br>
                   <textarea class="form-control" id="address-from">
-658 Preston Old Road
-Feniscowles
-Blackburn
-Lancashire
-BB2 5EP
+Tyler Fraser
+41 Mill Lane
+CORSCOMBE
+DT2 6ZB
                   </textarea>
                 </div>
               </div>
@@ -71,51 +69,61 @@ BB2 5EP
 
           <div class="row">
             <div class="col-md-12">
-              
-                <table class="table table-condensed table-bordered" id="tab_logic">
-                  <thead>
-                    <tr>
-                      <th><strong>Item</strong></th>
-                      <th><strong>Description</strong></th>
-                      <th><strong>Price</strong></th>
-                      <th><strong>Quantity</strong></th>
-                      <th><strong>Totals</strong></th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr class="item-row">
-                      <td>
-                        <div class="del">
-                          <textarea class="form-control" id="date">Website</textarea>
-                          <a href="#" class="deleterow"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
-                        </div>
-                      </td>
-                      <td><textarea class="form-control" id="date">Description</textarea></td>
-                      <td><textarea class="form-control" id="date">£1999</textarea></td>
-                      <td><textarea class="form-control" id="date">1</textarea></td>
-                      <td><textarea class="form-control" id="date">$1999</textarea></td>
-                    </tr>
-                    <tr>
-                      <td colspan="5"><button class="btn btn-sm btn-success" id="addrow">Add item</button></td>
-                    </tr>
-                    <tr>
-                      <td colspan="3" class="thick-line"></td>
-                      <td class="thick-line text-center"><strong>Subtotal</strong></td>
-                      <td class="thick-line text-right">$670.99</td>
-                    </tr>
-                    <tr>
-                      <td colspan="3" class="no-line"></td>
-                      <td class="no-line text-center"><strong>Shipping</strong></td>
-                      <td class="no-line text-right">$15</td>
-                    </tr>
-                    <tr>
-                      <td colspan="3" class="no-line"></td>
-                      <td class="no-line text-center"><strong>Total</strong></td>
-                      <td class="no-line text-right">$685.99</td>
-                    </tr>
-                  </tbody>
-                </table>
-              
+              <table class="table table-condensed table-bordered" id="tab_logic">
+                <thead>
+                  <tr>
+                    <th><strong>Item</strong></th>
+                    <th><strong>Description</strong></th>
+                    <th class="text-center"><strong>Cost</strong></th>
+                    <th class="text-center"><strong>Quantity</strong></th>
+                    <th class="text-center"><strong>Price</strong></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="item-row">
+                    <td>
+                      <div class="del">
+                        <textarea class="form-control" id="date">Website</textarea>
+                        <a href="#" class="deleterow hidden-print"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
+                      </div>
+                    </td>
+                    <td><textarea class="form-control description">Description</textarea></td>
+                    <td><textarea class="form-control text-center cost">£100</textarea></td>
+                    <td><textarea class="form-control text-center qty">1</textarea></td>
+                    <td><textarea class="form-control text-center price">£100</textarea></td>
+                  </tr>
+                  <tr class='hidden-print'>
+                    <td colspan="5"><button class="btn btn-sm btn-success" id="addrow">Add item</button></td>
+                  </tr>
+                  <tr>
+                    <td colspan="3" class="thick-line"></td>
+                    <td class="thick-line text-center"><strong>Subtotal</strong></td>
+                    <td class="thick-line text-center"><div id="subtotal">£100.00</div></td>
+                  </tr>
+                  <tr>
+                    <td colspan="3" class="no-line"></td>
+                    <td class="no-line text-center"><strong>Total</strong></td>
+                    <td class="no-line text-center"><div id="total">£100.00</div></td>
+                  </tr>
+                  <tr>
+                    <td colspan="3" class="no-line"></td>
+                    <td class="no-line text-center"><strong>Amount Paid</strong></td>
+                    <td class="no-line text-center" id="paid">£0</td>
+                  </tr>
+                  <tr>
+                    <td colspan="3" class="no-line"></td>
+                    <td class="no-line text-center"><strong>Balance Due</strong></td>
+                    <td class="no-line text-center"><div id="due">£100.00</div></td>
+                  </tr>
+                </tbody>
+              </table>
+              <hr>
+              <div id="terms">
+                <h5 class="text-center">Terms and Bank details</h5>
+                <textarea class="form-control text-center">
+Terms: 14 days from date of invoice late payments will incur an 8% apr charge, BACS Payment  
+Bank Details: Royal Bank of Scotland, Blackburn, Sort Code 00-00-00, Account Number: 12345678 </textarea>
+              </div>
             </div>
           </div>
         </div>
