@@ -9,6 +9,7 @@ Might be useful to some of you with extremely lightweight invoicing needs.
 
 - Does the math automatically when you change quantities and amounts
 - Add and remove rows of items
+- Bootstrap 3
 
 This is a fork of original 
 

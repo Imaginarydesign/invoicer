@@ -56,7 +56,9 @@ function updateTotal() {
   var total = 0;
   $('.price').each(function(){
     var price = $(this).html().replace('£','');
-    if (!isNaN(price)) total += Number(price);
+    if (!isNaN(price)) {
+      total += Number(price);
+    }
   });
   total = roundNumber(total,2);
 
@@ -80,17 +82,18 @@ function bind() {
 }
 
 $(document).ready(function() {
-
-  // $("#paid").blur(updateBalance);
   
-  if ($(".deleterow").length < 2) $(".deleterow").hide();
+  if ($('.deleterow').length < 2) {
+    $('.deleterow').hide();
+  }
 
   // Add row
   $('#addrow').click(function(){
     $('.item-row:last').after('<tr class="item-row"><td><div class="del"><textarea class="form-control" id="date">Website</textarea><a href="#" class="deleterow hidden-print"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a></div></td><td><textarea class="form-control description">Description</textarea></td><td><textarea class="form-control text-center cost">£100</textarea></td><td><textarea class="form-control text-center qty">1</textarea></td><td><textarea class="form-control text-center price">$100</textarea></td></tr>');
-    if ($(".deleterow").length > 1) $(".deleterow").show();
+    if ($('.deleterow').length > 1) {
+      $('.deleterow').show();
+    } 
     bind();
-
   });
 
   bind();
@@ -105,10 +108,10 @@ $(document).ready(function() {
     killrow.fadeOut(300, function(){
       $(this).remove();
       updateTotal();
-      if ($(".deleterow").length < 2) $(".deleterow").hide();
+      if ($('.deleterow').length < 2) {
+        $('.deleterow').hide();
+      }
     });
   });
-  
-
 
 });
