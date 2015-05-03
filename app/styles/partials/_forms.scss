@@ -1,0 +1,35 @@
+// Form elements
+.form-control {
+  border: none;
+  border: 0;
+  box-shadow: none;
+  resize: none;
+  padding: 0;
+  &:hover, 
+  &:focus {
+    background: #EEFF88;
+  }
+}
+
+// Address
+#address-from, #address-to {
+  min-height: 130px;
+}
+
+// Invoice number
+#invoice-number {
+  display: inline;
+  width: auto;
+  font-size: 30px;
+}
+
+// Container div for positioning delete row absolutely
+.del {
+  position: relative;
+}
+
+.deleterow {
+  position: absolute;
+  top: 0;
+  left: -30px;
+}
