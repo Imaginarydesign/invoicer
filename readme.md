@@ -1,7 +1,8 @@
 # Quick invoice
 
 Requires zero software other than your browser.
-Might be useful to some of you with extremely lightweight invoicing needs.
+
+![invoicer](https://github.com/Imaginarydesign/invoicer/raw/master/image.png)
 
 ## Features
 
@@ -21,5 +22,5 @@ If you find this project handy, please let me know and I'll be very happy.
 
 ## Credits
 
-This is a fork of original 
+This project is inspired by Chris Coyier's [Editable Invoice](https://css-tricks.com/editable-invoice-v2/)
 
