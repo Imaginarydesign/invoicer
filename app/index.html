@@ -30,7 +30,7 @@
           <div class="row">
             <div class="col-xs-12">
               <div class="invoice-title">
-                <h2>Invoice # <input id="invoice-number" class="form-control" type="text" value="123"></h2>
+                <h2>Invoice # <input id="invoice-number" class="form-control" type="text" value="001"></h2>
               </div>
               <hr>
               <div class="row">
@@ -44,9 +44,13 @@ HR2 0QY
                   </textarea>
                 </div>
                 <div class="col-xs-5">
-                  <strong>From:</strong><br>
+                  <p class="hidden-print"><a href="#" id="change-logo">Change logo</a> | <a href="#" id="remove-logo">Remove logo</a></p>
+
+                  <input style="display: none;" type='file' id="imgInp" />
+                  <img class="img-responsive" id="image" src="images/logo.png" alt="placeholder+image">
+
                   <textarea class="form-control" id="address-from">
-Tyler Fraser
+Widgets Co
 41 Mill Lane
 CORSCOMBE
 DT2 6ZB
@@ -73,24 +77,24 @@ DT2 6ZB
                 <thead>
                   <tr>
                     <th><strong>Item</strong></th>
-                    <th><strong>Description</strong></th>
-                    <th class="text-center"><strong>Cost</strong></th>
+                    <th style="min-width: 200px;"><strong>Description</strong></th>
+                    <th class="text-center"><strong>Unit Cost</strong></th>
                     <th class="text-center"><strong>Quantity</strong></th>
-                    <th class="text-center"><strong>Price</strong></th>
+                    <th class="text-center" style="min-width: 100px;"><strong>Price</strong></th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr class="item-row">
                     <td>
                       <div class="del">
-                        <textarea class="form-control" id="date">Website</textarea>
+                        <textarea class="form-control" id="date">Website design</textarea>
                         <a href="#" class="deleterow hidden-print"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
                       </div>
                     </td>
-                    <td><textarea class="form-control description">Description</textarea></td>
-                    <td><textarea class="form-control text-center cost">£100</textarea></td>
+                    <td><textarea rows="3" class="form-control description">Chia fingerstache kitsch, literally before they sold out umami slow-carb </textarea></td>
+                    <td><textarea class="form-control text-center cost">£2000</textarea></td>
                     <td><textarea class="form-control text-center qty">1</textarea></td>
-                    <td><textarea class="form-control text-center price">£100</textarea></td>
+                    <td class="text-center"><span class="price">£2000</span></td>
                   </tr>
                   <tr class='hidden-print'>
                     <td colspan="5"><button class="btn btn-sm btn-success" id="addrow">Add item</button></td>
@@ -98,26 +102,25 @@ DT2 6ZB
                   <tr>
                     <td colspan="3" class="thick-line"></td>
                     <td class="thick-line text-center"><strong>Subtotal</strong></td>
-                    <td class="thick-line text-center"><div id="subtotal">£100.00</div></td>
+                    <td class="thick-line text-center"><div id="subtotal">£2000.00</div></td>
                   </tr>
                   <tr>
                     <td colspan="3" class="no-line"></td>
                     <td class="no-line text-center"><strong>Total</strong></td>
-                    <td class="no-line text-center"><div id="total">£100.00</div></td>
+                    <td class="no-line text-center"><div id="total">£2000.00</div></td>
                   </tr>
                   <tr>
                     <td colspan="3" class="no-line"></td>
                     <td class="no-line text-center"><strong>Amount Paid</strong></td>
-                    <td class="no-line text-center" id="paid">£0</td>
+                    <td class="no-line"><textarea style="height: 23px;" class="form-control text-center" id="paid">£0.00</textarea></td>
                   </tr>
                   <tr>
                     <td colspan="3" class="no-line"></td>
                     <td class="no-line text-center"><strong>Balance Due</strong></td>
-                    <td class="no-line text-center"><div id="due">£100.00</div></td>
+                    <td class="no-line text-center"><div id="due">£2000.00</div></td>
                   </tr>
                 </tbody>
               </table>
-              <hr>
               <div id="terms">
                 <h5 class="text-center">Terms and Bank details</h5>
                 <textarea class="form-control text-center">

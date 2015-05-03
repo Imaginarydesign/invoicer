@@ -81,19 +81,45 @@ function bind() {
   $('.qty').blur(updatePrice);
 }
 
+function addup() {
+  var sum = 0;
+  $('.price').each(function(){
+    sum += parseFloat($(this).html().replace('£',''));
+  });
+  sum = roundNumber(sum,2);
+
+  $('#subtotal').html('£' + sum);
+  $('#total').html('£' + sum);
+
+  updateBalance();
+}
+
+function readURL(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function (e) {
+        $('#image').attr('src', e.target.result);
+      }
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+
 $(document).ready(function() {
   
   if ($('.deleterow').length < 2) {
     $('.deleterow').hide();
   }
 
+  $('#paid').blur(updateBalance);
+
   // Add row
   $('#addrow').click(function(){
-    $('.item-row:last').after('<tr class="item-row"><td><div class="del"><textarea class="form-control" id="date">Website</textarea><a href="#" class="deleterow hidden-print"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a></div></td><td><textarea class="form-control description">Description</textarea></td><td><textarea class="form-control text-center cost">£100</textarea></td><td><textarea class="form-control text-center qty">1</textarea></td><td><textarea class="form-control text-center price">$100</textarea></td></tr>');
+    $('.item-row:last').after('<tr class="item-row"><td><div class="del"><textarea class="form-control" id="date">Item</textarea><a href="#" class="deleterow hidden-print"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a></div></td><td><textarea rows="3" class="form-control description">Description</textarea></td><td><textarea class="form-control text-center cost">£0</textarea></td><td><textarea class="form-control text-center qty">1</textarea></td><td class="text-center"><span class="price">£0</span></td></tr>');
     if ($('.deleterow').length > 1) {
       $('.deleterow').show();
     } 
     bind();
+    addup();
   });
 
   bind();
@@ -103,7 +129,6 @@ $(document).ready(function() {
   // Delegate click event handler to: current elements, 
   // or any future elements that will be added to the DOM
   $(document).on('click', '.deleterow' , function() {
-    // $(this).parents('.item-row').remove();
     var killrow = $(this).parents('.item-row');
     killrow.fadeOut(300, function(){
       $(this).remove();
@@ -113,5 +138,22 @@ $(document).ready(function() {
       }
     });
   });
+
+  $('#imgInp').change(function(){
+    readURL(this);
+  });
+
+  $('#change-logo').click(function(){
+    $('#image').css({'display': 'block'});
+    $('#imgInp').click();
+    return false;
+  });
+
+  $('#remove-logo').click(function(){
+    // $('#image').remove();
+    $('#image').css({'display': 'none'});
+  });
+
+  
 
 });

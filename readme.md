@@ -1,7 +1,5 @@
 # Quick invoice
 
-[At the top of the file there should be a short introduction and/ or overview that explains what the project is. This description should match descriptions added for package managers (Gemspec, package.json, etc.)]
-
 Requires zero software other than your browser.
 Might be useful to some of you with extremely lightweight invoicing needs.
 
@@ -10,6 +8,18 @@ Might be useful to some of you with extremely lightweight invoicing needs.
 - Does the math automatically when you change quantities and amounts
 - Add and remove rows of items
 - Bootstrap 3
+
+## Roadmap
+
+- Add multiple currency support
+
+## License
+
+No license restrictions, use it however and wherever you want - Commercial, Personal, Non-profit however you like. 
+
+If you find this project handy, please let me know and I'll be very happy.
+
+## Credits
 
 This is a fork of original 
 
