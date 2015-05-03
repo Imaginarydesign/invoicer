@@ -1,6 +1,6 @@
 # Quick invoice
 
-Requires zero software other than your browser.
+Requires zero software other than your browser. [http://imaginarydesign.github.io/invoicer/](http://imaginarydesign.github.io/invoicer/)
 
 ![invoicer](https://github.com/Imaginarydesign/invoicer/raw/master/image.png)
 
