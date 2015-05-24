@@ -1,4 +1,4 @@
-/* jshint devel:true */
+/* jshint devel:true, expr: true */
 
 'use strict';
 
@@ -41,7 +41,9 @@ function roundNumber(number,decimals) {
     newString += '.';
   }
   var decs = (newString.substring(newString.lastIndexOf('.')+1)).length;
-  for(var i=0;i<decimals-decs;i++) newString += '0';
+  for(var i=0;i<decimals-decs;i++) {
+    newString += '0';
+  } 
   //var newNumber = Number(newString);// make it a number if you like
   return newString; // Output the result to the form field (change for your purposes)
 }
@@ -68,13 +70,21 @@ function updateTotal() {
   updateBalance();
 }
 
-function updatePrice() {
+var updatePrice = function () {
   var row = $(this).parents('.item-row');
   var price = row.find('.cost').val().replace('£','') * row.find('.qty').val();
-  isNaN(price) ? row.find('.price').html('N/A') : row.find('.price').html('£'+price);
+  isNaN(price) ? row.find('.price').html('N/A') : row.find('.price').html('£' + price);
 
   updateTotal();
-}
+};
+
+// function updatePrice() {
+//   var row = $(this).parents('.item-row');
+//   var price = row.find('.cost').val().replace('£','') * row.find('.qty').val();
+//   isNaN(price) ? row.find('.price').html('N/A') : row.find('.price').html('£' + price);
+
+//   updateTotal();
+// }
 
 function bind() {
   $('.cost').blur(updatePrice);
@@ -99,7 +109,7 @@ function readURL(input) {
     var reader = new FileReader();
     reader.onload = function (e) {
         $('#image').attr('src', e.target.result);
-      }
+      };
     reader.readAsDataURL(input.files[0]);
   }
 }
