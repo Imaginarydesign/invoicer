@@ -30,12 +30,9 @@
       <div class="menu-wrap hidden-print">
         <nav class="menu">
           <div class="icon-list">
-            <a href="#"><i class="fa fa-fw fa-star-o"></i><span>Favorites</span></a>
-            <a href="#"><i class="fa fa-fw fa-bell-o"></i><span>Alerts</span></a>
-            <a href="#"><i class="fa fa-fw fa-envelope-o"></i><span>Messages</span></a>
-            <a href="#"><i class="fa fa-fw fa-comment-o"></i><span>Comments</span></a>
-            <a href="#"><i class="fa fa-fw fa-bar-chart-o"></i><span>Analytics</span></a>
-            <a href="#"><i class="fa fa-fw fa-newspaper-o"></i><span>Reading List</span></a>
+            <a href="#" onClick="window.print()"><i class="fa fa-fw fa-print"></i><span>Print</span></a>
+            <a href="#" data-toggle="modal" data-target="#roadmap"><i class="fa fa-fw fa-comment-o"></i><span>Roadmap</span></a>
+            <a href="#" data-toggle="modal" data-target="#about"><i class="fa fa-fw fa-bell-o"></i><span>About</span></a>
           </div>
         </nav>
         <button class="close-button" id="close-button">Close Menu</button>
@@ -146,6 +143,52 @@ DT2 6ZB
 Terms: 14 days from date of invoice late payments will incur an 8% apr charge, BACS Payment  
 Bank Details: Royal Bank of Scotland, Blackburn, Sort Code 00-00-00, Account Number: 12345678 </textarea>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Modal Roadmap -->
+      <div class="modal fade" id="roadmap" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">Roadmap</h4>
+            </div>
+            <div class="modal-body">
+              <p><strong>Improvements</strong></p>
+              <ul class="list-unstyled">
+                <li><span class="glyphicon glyphicon-unchecked" aria-hidden="true"></span> Add multiple currency support</li>
+                <li><span class="glyphicon glyphicon-unchecked" aria-hidden="true"></span> Persistent data storage</li>
+                <li><span class="glyphicon glyphicon-unchecked" aria-hidden="true"></span> Email generated invoice</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal About -->
+      <div class="modal fade" id="about" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">Quick Invoice</h4>
+            </div>
+            <div class="modal-body">
+              <p>Requires zero software other than your browser. <a href="http://imaginarydesign.github.io/invoicer/">http://imaginarydesign.github.io/invoicer/</a></p>
+              <h5>Features</h5>
+              <ul>
+                <li>Does the math automatically when you change quantities and amounts</li>
+                <li>Add and remove rows of items</li>
+                <li>Bootstrap 3 (Sass)</li>
+              </ul>
+              <h5>Licence</h5>
+              <p>No license restrictions, use it however and wherever you want - Commercial, Personal, Non-profit however you like.</p>
+              <p>If you find this project handy, please let me know and I'll be very happy.</p>
+              <hr>
+              <p>Designed & coded in Manchester by <a href="http://imaginarydesign.co.uk/" target="_blank">ImaginaryDesign</a></p>
             </div>
           </div>
         </div>
