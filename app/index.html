@@ -13,6 +13,7 @@
   <!-- endbuild -->
 
   <!-- build:css styles/main.css -->
+  <link rel="stylesheet" href="fonts/font-awesome-4.2.0/css/font-awesome.min.css" />
   <link rel="stylesheet" href="styles/main.css">
   <!-- endbuild -->
 
@@ -21,9 +22,24 @@
   <!-- endbuild -->
 </head>
 <body>
+
     <!--[if lt IE 10]>
-      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-      <![endif]-->
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+      <div class="menu-wrap hidden-print">
+        <nav class="menu">
+          <div class="icon-list">
+            <a href="#" onClick="window.print()"><i class="fa fa-fw fa-print"></i><span>Print</span></a>
+            <a href="#" data-toggle="modal" data-target="#roadmap"><i class="fa fa-fw fa-comment-o"></i><span>Roadmap</span></a>
+            <a href="#" data-toggle="modal" data-target="#about"><i class="fa fa-fw fa-bell-o"></i><span>About</span></a>
+          </div>
+        </nav>
+        <button class="close-button" id="close-button">Close Menu</button>
+      </div>
+      <button class="menu-button hidden-print hidden-sm hidden-xs" id="open-button">Open Menu</button>
+
+      <div class="page-wrapper">
     
       <div class="wrapper">
         <div class="container">
@@ -131,7 +147,56 @@ Bank Details: Royal Bank of Scotland, Blackburn, Sort Code 00-00-00, Account Num
           </div>
         </div>
       </div>
+      
+      <!-- Modal Roadmap -->
+      <div class="modal fade" id="roadmap" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">Roadmap</h4>
+            </div>
+            <div class="modal-body">
+              <p><strong>Improvements</strong></p>
+              <ul class="list-unstyled">
+                <li><span class="glyphicon glyphicon-unchecked" aria-hidden="true"></span> Add multiple currency support</li>
+                <li><span class="glyphicon glyphicon-unchecked" aria-hidden="true"></span> Persistent data storage</li>
+                <li><span class="glyphicon glyphicon-unchecked" aria-hidden="true"></span> Email generated invoice</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal About -->
+      <div class="modal fade" id="about" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">Quick Invoice</h4>
+            </div>
+            <div class="modal-body">
+              <p>Requires zero software other than your browser. <a href="http://imaginarydesign.github.io/invoicer/">http://imaginarydesign.github.io/invoicer/</a></p>
+              <h5>Features</h5>
+              <ul>
+                <li>Does the math automatically when you change quantities and amounts</li>
+                <li>Add and remove rows of items</li>
+                <li>Bootstrap 3 (Sass)</li>
+              </ul>
+              <h5>Licence</h5>
+              <p>No license restrictions, use it however and wherever you want - Commercial, Personal, Non-profit however you like.</p>
+              <p>If you find this project handy, please let me know and I'll be very happy.</p>
+              <hr>
+              <p>Designed & coded in Manchester by <a href="http://imaginarydesign.co.uk/" target="_blank">ImaginaryDesign</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <p class="text-center text-muted hidden-print" style="margin-top: 20px;">Designed & coded in Manchester by <a href="http://imaginarydesign.co.uk/">ImaginaryDesign</a></p>
+
+      </div><!-- Page wrapper -->
 
 
       <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
@@ -163,10 +228,13 @@ Bank Details: Royal Bank of Scotland, Blackburn, Sort Code 00-00-00, Account Num
       <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/scrollspy.js"></script>
       <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/collapse.js"></script>
       <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tab.js"></script>
+      <script src="scripts/classie.js"></script>
+      <script src="scripts/menu.js"></script>
       <!-- endbuild -->
 
       <!-- build:js scripts/main.js -->
       <script src="scripts/main.js"></script>
       <!-- endbuild -->
-    </body>
-    </html>
+    
+  </body>
+</html>

@@ -27,3 +27,8 @@ body {
     max-width: 730px;
   }
 }
+
+.modal-open .modal, a:focus{
+    outline:none!important
+    text-decoration: none !important;
+}
