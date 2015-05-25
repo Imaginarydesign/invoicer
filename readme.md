@@ -14,6 +14,13 @@ Requires zero software other than your browser. [http://imaginarydesign.github.i
 
 - Add multiple currency support
 
+## Author
+
+**Adam Koniuszewski**
+
+- <https://twitter.com/ImaginaryDesign>
+- <https://github.com/Imaginarydesign>
+
 ## License
 
 No license restrictions, use it however and wherever you want - Commercial, Personal, Non-profit however you like. 
