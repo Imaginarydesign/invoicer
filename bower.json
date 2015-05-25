@@ -4,8 +4,5 @@
   "dependencies": {
     "bootstrap-sass-official": "~3.3.1",
     "modernizr": "~2.8.1"
-  },
-  "devDependencies": {
-    "font-awesome": "~4.3.0"
   }
 }
