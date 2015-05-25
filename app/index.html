@@ -21,9 +21,27 @@
   <!-- endbuild -->
 </head>
 <body>
+
     <!--[if lt IE 10]>
-      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-      <![endif]-->
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+      <div class="menu-wrap hidden-print">
+        <nav class="menu">
+          <div class="icon-list">
+            <a href="#"><i class="fa fa-fw fa-star-o"></i><span>Favorites</span></a>
+            <a href="#"><i class="fa fa-fw fa-bell-o"></i><span>Alerts</span></a>
+            <a href="#"><i class="fa fa-fw fa-envelope-o"></i><span>Messages</span></a>
+            <a href="#"><i class="fa fa-fw fa-comment-o"></i><span>Comments</span></a>
+            <a href="#"><i class="fa fa-fw fa-bar-chart-o"></i><span>Analytics</span></a>
+            <a href="#"><i class="fa fa-fw fa-newspaper-o"></i><span>Reading List</span></a>
+          </div>
+        </nav>
+        <button class="close-button" id="close-button">Close Menu</button>
+      </div>
+      <button class="menu-button hidden-print hidden-sm hidden-xs" id="open-button">Open Menu</button>
+
+      <div class="page-wrapper">
     
       <div class="wrapper">
         <div class="container">
@@ -131,7 +149,10 @@ Bank Details: Royal Bank of Scotland, Blackburn, Sort Code 00-00-00, Account Num
           </div>
         </div>
       </div>
+
       <p class="text-center text-muted hidden-print" style="margin-top: 20px;">Designed & coded in Manchester by <a href="http://imaginarydesign.co.uk/">ImaginaryDesign</a></p>
+
+      </div><!-- Page wrapper -->
 
 
       <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
@@ -163,10 +184,13 @@ Bank Details: Royal Bank of Scotland, Blackburn, Sort Code 00-00-00, Account Num
       <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/scrollspy.js"></script>
       <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/collapse.js"></script>
       <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tab.js"></script>
+      <script src="scripts/classie.js"></script>
+      <script src="scripts/menu.js"></script>
       <!-- endbuild -->
 
       <!-- build:js scripts/main.js -->
       <script src="scripts/main.js"></script>
       <!-- endbuild -->
-    </body>
-    </html>
+    
+  </body>
+</html>
