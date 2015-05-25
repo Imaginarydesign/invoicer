@@ -1,3 +1,5 @@
+/*global classie*/
+
 /**
  * main.js
  * http://www.codrops.com
@@ -9,6 +11,8 @@
  * http://www.codrops.com
  */
 (function() {
+
+  'use strict';
 
 	var bodyEl = document.body,
 		content = document.querySelector( '.wrapper' ),
