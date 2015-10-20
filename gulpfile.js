@@ -5,6 +5,13 @@ var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
+var deploy = require('gulp-gh-pages');
+
+// Push build to gh-pages
+gulp.task('deploy', function () {
+  return gulp.src("./dist/**/*")
+    .pipe(deploy())
+});
 
 gulp.task('styles', function () {
   return gulp.src('app/styles/main.scss')
